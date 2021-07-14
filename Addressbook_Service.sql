@@ -52,3 +52,22 @@ mysql> desc Addressbook;
 | email_id     | varchar(20)  | NO   |     | NULL    |       |
 +--------------+--------------+------+-----+---------+-------+
 8 rows in set (0.49 sec)
+
+//UC 3
+
+
+mysql> INSERT INTO addressbook
+    -> (first_name, last_name, address, city, state, zip, phone_number, email_id) values
+    -> ('Aditya', 'Sharma', 'Nehru nagar', 'Lucknow','Uttar Pardesh', 110001,9876543211,'adityas@gamil.com'),
+    -> ('Purva','Joshi','Kothurd', 'Pune', 'Maharashtra', 411012, 8765433129,'pjoshi98@gmail.com');
+Query OK, 2 rows affected (0.69 sec)
+Records: 2  Duplicates: 0  Warnings: 0
+
+mysql> select * from addressbook;
++----+------------+-----------+-------------+---------+---------------+--------+--------------+--------------------+
+| id | first_name | last_name | address     | city    | state         | zip    | phone_number | email_id           |
++----+------------+-----------+-------------+---------+---------------+--------+--------------+--------------------+
+|  1 | Aditya     | Sharma    | Nehru nagar | Lucknow | Uttar Pardesh | 110001 | 9876543211   | adityas@gamil.com  |
+|  2 | Purva      | Joshi     | Kothurd     | Pune    | Maharashtra   | 411012 | 8765433129   | pjoshi98@gmail.com |
++----+------------+-----------+-------------+---------+---------------+--------+--------------+--------------------+
+2 rows in set (0.00 sec)
