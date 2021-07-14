@@ -71,3 +71,19 @@ mysql> select * from addressbook;
 |  2 | Purva      | Joshi     | Kothurd     | Pune    | Maharashtra   | 411012 | 8765433129   | pjoshi98@gmail.com |
 +----+------------+-----------+-------------+---------+---------------+--------+--------------+--------------------+
 2 rows in set (0.00 sec)
+
+//UC 4
+
+mysql> UPDATE addressbook
+    -> SET address='Karve nagar' WHERE first_name='Purva';
+Query OK, 1 row affected (0.15 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> select * from addressbook;
++----+------------+-----------+-------------+---------+---------------+--------+--------------+--------------------+
+| id | first_name | last_name | address     | city    | state         | zip    | phone_number | email_id           |
++----+------------+-----------+-------------+---------+---------------+--------+--------------+--------------------+
+|  1 | Aditya     | Sharma    | Nehru nagar | Lucknow | Uttar Pardesh | 110001 | 9876543211   | adityas@gamil.com  |
+|  2 | Purva      | Joshi     | Karve nagar | Pune    | Maharashtra   | 411012 | 8765433129   | pjoshi98@gmail.com |
++----+------------+-----------+-------------+---------+---------------+--------+--------------+--------------------+
+2 rows in set (0.02 sec)
